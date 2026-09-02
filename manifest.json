@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Progipac - Optimisateur de Rotation et Prix",
+  "version": "1.0",
+  "description": "Optimisation intelligente pour Progipac : gestion automatisée des stocks et calcul dynamique des remises par rotation.",
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://begin.progipac.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://begin.progipac.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
